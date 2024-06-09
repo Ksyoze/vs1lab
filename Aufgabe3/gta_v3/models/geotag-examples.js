@@ -5,12 +5,16 @@
  * Complete all TODOs in the code documentation.
  */
 
-/**
- * A class representing example geoTags at HKA
- * 
- * TODO: populate your InMemoryGeoTagStore with these tags
- * 
- */
+// models/geotag-examples.js
+const GeoTagStore = require('./geotag-store');
+
+const exampleStore = new GeoTagStore();
+exampleStore.addTag('Example Tag 1', 52.5200, 13.4050);
+exampleStore.addTag('Example Tag 2', 48.8566, 2.3522);
+exampleStore.addTag('Example Tag 3', 40.7128, -74.0060);
+
+module.exports = exampleStore;
+
 class GeoTagExamples {
     /**
      * Provides some geoTag data
@@ -31,5 +35,3 @@ class GeoTagExamples {
         ];
     }
 }
-
-module.exports = GeoTagExamples;

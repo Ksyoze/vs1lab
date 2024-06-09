@@ -9,7 +9,6 @@
 /**
  * Define module dependencies.
  */
-
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -20,14 +19,13 @@ const indexRouter = require('./routes/index');
 /**
  * Set up Express app.
  */
-
 const app = express();
 
 // Set ejs as the view engine.
-app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
 // Set ejs template folder.
-app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
 // Set logger
 app.use(logger('dev'));
@@ -41,8 +39,9 @@ app.use(express.urlencoded({ extended: false }));
  * Configure path for static content.
  * Test the result in a browser here: 'http://localhost:3000/'.
  */
-
-// TODO: ... your code here ...
+ 
+// TODO: Configure the static file serving
+app.use(express.static(path.join(__dirname, 'public'))); 
 
 // Set dedicated script for routing
 app.use('/', indexRouter);
@@ -50,7 +49,7 @@ app.use('/', indexRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     next(createError(404));
-  });
+});
 
 // error handler
 app.use(function(err, req, res) {
@@ -60,6 +59,6 @@ app.use(function(err, req, res) {
     // render the error page
     res.status(err.status || 500);
     res.render('error');
-  });
+});
 
- module.exports = app;
+module.exports = app;
