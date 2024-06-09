@@ -20,7 +20,6 @@ html {
   box-sizing: inherit;
 }
 
-
 /* Variables (example: see declaration for "a" below) */
 
 :root {
@@ -29,7 +28,6 @@ html {
   --border-color: #cdcdcd;
   --gray-color: #666;
 }
-
 
 /* HTML element styles */
 
@@ -42,6 +40,7 @@ body {
 
 a {
   color: var(--link-color);
+  padding: 0px 5px 0px 5px;
 }
 
 /* ### TODO ### Styles for other HTML elements */
@@ -51,14 +50,12 @@ legend {
 }
 /* ... your code here ... */
 
-
 /* Grid styles (no changes required) */
 
 .row {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex: 1;
+  display: grid;
+  ;
 }
 
 .col-1 {
@@ -121,118 +118,34 @@ legend {
 
 /* ... your code here ... */
 
-.header img {
-  height: 50px;
-  width: 50px;
-}
 
 /* ### TODO ### Styles for Main Component */
+
+.main{
+  display: flex;
+  flex-wrap: wrap;
+  flex: auto;
+}
+
+.main h2{
+  margin-bottom: 2rem;
+}
+
+/* ### TODO ### Styles for Tagging component */
 
 /* ... your code here ... */
 
 
-/* ### TODO ### Styles for Tagging component */
-.tagging {
-  padding: 1rem;
-}
-
-.tagging h2 {
-  margin-bottom: 1rem;
-}
-
-.tagging button {
-  margin-bottom: 0.5rem;
-  margin-left: 0.75rem;
-  padding: 0.5rem;
-  border: 0.1rem solid #cdcdcd;
-  border-radius: 0.05rem;
-}
-
-
-#tag-form label {
-  margin-bottom: 0.5rem;
-  margin-left: 0.75rem;
-  display: block;
-}
-
-fieldset {
-  border: 0.1rem solid #cdcdcd;
-  border-radius: 0.25rem;
-}
-
-legend {
-  margin-left: 0.75rem;
-}
-
-
 /* ### TODO ### Styles for Discovery component */
-.discovery {
-  padding: 1rem;
-}
 
-.discovery__title {
-  margin-bottom: 1rem;
-}
-
-.discovery__search {
-  margin-bottom: 0.5rem;
-}
-
-.discovery__search label {
-  margin-bottom: 0.5rem;
-  margin-left: 0.75rem;
-}
-
-input {
-  margin: 0.5rem;
-  padding: 0.5rem;
-  display: block;
-  border: 0.1rem solid #cdcdcd;
-  border-radius: 0.1rem;
-  width: 100% - 3rem;
-}
-
-.discovery__search button {
-  margin-bottom: 0.5rem;
-  margin-left: 0.75rem;
-  padding: 0.5rem;
-  border: 0.1rem solid #cdcdcd;
-  border-radius: 0.05rem;
-}
-
-.discovery__results {
-  margin-right: 2rem;
-  margin-top: 1rem;
-  list-style-type: none;
-}
-
-.discovery__results li {
-  color: #00B7FF;
-  background-color: #efefef;
-  margin-bottom: 0.5rem;
-  padding: 0.5rem;
-  outline: 0.05rem solid #cdcdcd;
-}
-
-.discovery__map {
-  margin-top: 1rem;
-  display: grid;
-}
+/* ... your code here ... */
 
 
 /* ### TODO ### Styles for Footer Component */
-.footer {
-  background-color: #efefef;
-  padding: 1rem;
-}
+
+/* ... your code here ... */
 
 
 /* ### TODO ### Media Queries */
-@media screen and (max-width: 850px) {
-  .row {
-    flex-direction: column;
-  }
-  .col-3, .col-9, .col-4, .col-8{
-    width: 100%;
-  }
-}
+
+/* ... your code here ... */
